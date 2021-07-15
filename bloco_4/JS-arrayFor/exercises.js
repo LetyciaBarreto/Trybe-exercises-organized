@@ -58,3 +58,18 @@ for(i = 1; i < numbers7.length; i++) {
 }
   }
   console.log(menor);
+
+    // Exe 8
+let numebrs8 = [];
+for(i = 1; i <= 25; i++) {
+  numebrs8.push(i)
+}
+  console.log(numebrs8);
+
+      // Exe 9
+let numbers9 = [];
+for(i = 1; i <= 25; i++) {
+  numbers9.push(i)
+}for( j =0; j < numbers9.length; j++){
+  console.log(numbers9[j]/ 2);
+}
