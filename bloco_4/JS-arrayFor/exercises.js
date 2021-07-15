@@ -38,3 +38,23 @@ for(i = 1; i < numbers5.length; i++) {
 }
   }
   console.log(maior);
+
+  // Exe 6
+let numbers6 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let impar = 0;
+for(i = 0; i < numbers6.length; i++) {
+  if(numbers6[i] % 2 !== 0){
+  impar++;
+}
+  }
+  console.log(impar);
+
+  // Exe 7
+let numbers7 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let menor = numbers7[0];
+for(i = 1; i < numbers7.length; i++) {
+  if(numbers7[i] < menor){
+  menor = numbers7[i];
+}
+  }
+  console.log(menor);
