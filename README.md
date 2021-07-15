@@ -1,1 +1,1 @@
-# Trybe-exercises-organized
+# Repositórios de exercicios feitos na Trybe, organizados corretamente.
