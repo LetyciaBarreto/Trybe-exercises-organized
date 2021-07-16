@@ -1,0 +1,1 @@
+Exercicios usando lógica para impressão de piramides.
