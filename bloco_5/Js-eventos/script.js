@@ -19,17 +19,23 @@ function dataOfTheMonth(){
   for (let index = 0; index < dezDaysList.length; index++){
     const data = dezDaysList[index];
     const dataList = document.createElement( 'li');
-   if(data === 24 || data ===25 || data === 31){
-    dataList.className = 'holiday';
+   if(data === 24 || data === 31){
+    dataList.className = 'day holiday';
     dataList.innerHTML = data;
     daysList.appendChild(dataList);
 
-   } else if( data === 4 || data === 11 ||data === 18 || data === 25) {
-    dataList.className = 'friday';
+   } else if( data === 4 || data === 11 ||data === 18) {
+    dataList.className = 'day friday';
     dataList.innerHTML = data;
     daysList.appendChild(dataList);
 
-   } else {
+   } else if( data === 25){
+    dataList.className = 'day holiday friday';
+    dataList.innerHTML = data;
+    daysList.appendChild(dataList);
+    
+   }
+   else {
     dataList.className = 'day';
     dataList.innerHTML = data;
     daysList.appendChild(dataList);
@@ -90,3 +96,53 @@ getFriday.addEventListener('click', () => {
 })
 };
 fridayChange([4, 11, 18, 25]);
+
+function zoomDay() {
+  const days = document.querySelector('#days');
+  days.addEventListener('mouseover', (event) => {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+function zoomDayOut() {
+  const days = document.querySelector('#days');
+  days.addEventListener('mouseout', (event) => {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+};
+zoomDay();
+zoomDayOut();
+
+function createTasks(task){
+
+  const getClass = document.querySelector('.my-tasks');
+  const tasks = document.createElement('span');
+  tasks.innerHTML = task;
+  getClass.appendChild(tasks);
+};
+
+createTasks('estudar');
+
+function createLegend(cor) {
+  const getClass = document.querySelector('.my-tasks');
+  const createDiv = document.createElement('div');
+  createDiv.className = 'task';
+  createDiv.style.backgroundColor = cor;
+  getClass.appendChild(createDiv);
+}
+ createLegend('blue');
+
+
+function selectTask() {
+  const getClassTask = document.querySelector('.task');
+  const getSelectTask = document.getElementsByClassName('task select');
+  getClassTask.addEventListener('click', (event) => {
+    if ( getSelectTask.length === 0) {
+      event.target.className = 'task select';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+selectTask();
