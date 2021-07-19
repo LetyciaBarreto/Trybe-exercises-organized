@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap-grid.min.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            
+                <legend>Dados Pessoais:</legend>
+                <div class= 'mb-3'>
+                <label for = 'name'>Nome
+                    <input id = 'name' type="text" maxlength="40" required>
+                </label>
+            
+                <label for ='email'>E-mail:
+                    <input id = 'email' type="text" maxlength="50" required>
+                </label>
+                <br>
+                <br>
+                <label for ='cpf'>CPF:
+                    <input id = 'CPF' type="text" maxlength="11" required>
+                </label>
+                <br>
+                <br>
+                <label for ='addres'>Endereço:
+                    <input id = 'addres' type="text" maxlength="200" required>
+                </label>
+                <label for ='city'>Cidade:
+                    <input id = 'city' type="text" maxlength="28" required>
+                </label>
+                <br>
+                <br>
+                <label for='state'>Estado</label>
+                    <select class =' form-select form-select-lg'required name= 'estado'id = 'state'>
+                    </select>
+                
+                    <label for ='type'>Tipo:
+                        <input id = 'type1' type="radio" name="tipo" value ='ap'>Apartamento 
+                        <input id = 'type2' type="radio" name="tipo" value ='cs'>Casa 
+                    </label>
+                </div>
+            </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Dados do seu último emprego</legend>
+                <p>Resumo do currículo</p>
+                <textarea id ='resume' required maxlength="1000"></textarea>
+                <br>
+                <br>
+                <label for ='office'>Cargo:
+                    <input id = 'cargo' type="text" maxlength="40" required>
+                </label>
+                <label for ='office-description'>Descrição do cargo:
+                    <input id = 'office-description' type="text" maxlength="500" required>
+                </label>
+                <br>
+                <br>
+                <label for ='date'>Data de início:
+                    <input id = 'date' type="text" required>
+                </label>
+                
+            </fieldset>
+            <button type="submit">Enviar</button>
+            <button type="button">Limpar</button>
+
+</form>
+<script src = 'script.js'> </script>
+</body>
+
+</html>
